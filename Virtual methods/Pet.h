@@ -14,18 +14,7 @@ public:
 	Pet() = default;
 	Pet(const std::string& name, const std::string& type, const std::string& sound) : name_(name), type_(type), sound_(sound) {}
 
-	void Sound() const
-	{
-		std::cout << sound_ << "\n";
-	}
-
-	void Show() const 
-	{
-		std::cout << name_ << "\n";
-	}
-
-	void Type() const 
-	{
-		std::cout << type_ << "\n";
-	}
+	virtual void Sound() const = 0;
+	virtual void Show() const = 0;
+	virtual void Type() const = 0;
 };
