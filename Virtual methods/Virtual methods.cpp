@@ -5,28 +5,26 @@
 #include "Parrot.h"
 #include "Cat.h"
 
+static void TEST(Pet& obj)
+{
+    obj.Show();
+    obj.Type();
+    obj.Sound();
+    std::cout << "\n";
+}
+
 int main()
 {
     Humster a1;
-    a1.Show();
-    a1.Type();
-    a1.Sound();
-    std::cout << "\n";
+    TEST(a1);
 
     Dog a2;
-    a2.Show();
-    a2.Type();
-    a2.Sound();
-    std::cout << "\n";
+    TEST(a2);
 
     Parrot a3;
-    a3.Show();
-    a3.Type();
-    a3.Sound();
-    std::cout << "\n";
+    TEST(a3);
 
     Cat a4;
-    a4.Show();
-    a4.Type();
-    a4.Sound();
+    TEST(a4);
 }
+
